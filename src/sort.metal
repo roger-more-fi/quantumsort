@@ -49,7 +49,6 @@ void quantumsort_iter(const device uint32_t* keys_to_sort,
     }
 }
 
-
 kernel void quantumsort(const device uint32_t* keys_to_sort [[ buffer(0) ]],
                         device uint32_t* keys_sorted [[ buffer(1) ]],
                         device uint32_t* keys_sorted_temp [[ buffer(2) ]],

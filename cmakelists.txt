@@ -1,0 +1,24 @@
+##
+##  cmakelists.txt
+##  created by Harri Hilding Smatt on 2026-01-12
+##
+
+cmake_minimum_required(VERSION 3.20)
+
+set(TARGET_NAME Quantumsort)
+
+project(${TARGET_NAME} VERSION 1.0.0 LANGUAGES Swift)
+
+set(SOURCE_FILES
+    src/main.swift
+)
+
+set(METAL_FILES
+    src/sort.metal
+)
+set_source_files_properties(${METAL_FILES} PROPERTIES LANGUAGE METAL)
+
+add_executable(${TARGET_NAME}
+    ${METAL_FILES}
+    ${SOURCE_FILES}
+)
